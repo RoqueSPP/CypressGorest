@@ -9,7 +9,9 @@ jobs:
         uses: actions/checkout@v2
       - name: Cypress run
         uses: cypress-io/github-action@v4
+      - name: cpress
+         run: npm install
         with:
-          start: npm start
-          spec: cypress/e2e/gorest.cy.js
+           start: npm start
+           spec: cypress/e2e/gorest.cy.js
       
