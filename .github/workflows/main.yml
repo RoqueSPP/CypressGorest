@@ -8,7 +8,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: cypress
-        run: npx cypress run
+        run: npx cypress run --record --key b15c7ee0-41c3-4e0d-ac95-aa543d552792
       - name: Cypress run
         uses: cypress-io/github-action@v4
         with:
