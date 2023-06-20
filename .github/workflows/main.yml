@@ -7,10 +7,17 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Install Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '13.x'
 
+      - name: Install Dependencies
+        run: npm install
       - name: Cypress run
         uses: cypress-io/github-action@v4
         with:
           start: npm start
           working-directory: CypressGorest/cypress
           spec: cypress/e2e/gorest.cy.js
+      
