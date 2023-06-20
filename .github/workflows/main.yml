@@ -14,5 +14,4 @@ jobs:
         uses: cypress-io/github-action@v4
         with:
           start: npm start
-          working-directory: e2e
           spec: cypress/e2e/gorest.cy.js
